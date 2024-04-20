@@ -53,7 +53,7 @@ public class InstanceModel {
 
     @Override
     public String toString() {
-        return "CorporateSettlementInstanceModel{" +
+        return "InstanceModel{" +
                 "instanceId=" + instanceId +
                 ", productType=" + productType +
                 ", productCode='" + productCode + '\'' +

@@ -22,7 +22,7 @@ public class AccountModel {
 
     @Override
     public String toString() {
-        return "CorporateSettlementAccountModel{" +
+        return "AccountModel{" +
                 "instanceId=" + instanceId +
                 ", registryTypeCode='" + registryTypeCode + '\'' +
                 ", accountType='" + accountType + '\'' +
