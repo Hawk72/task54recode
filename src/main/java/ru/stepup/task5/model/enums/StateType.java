@@ -5,7 +5,7 @@ public enum StateType {
     OPEN("Открыт"),
     RESERVED("Зарезервирован"),
     DELETED("Удален");
-    private  String name;
+    private String name;
 
     StateType(String name) {
         this.name = name;
