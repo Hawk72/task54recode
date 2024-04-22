@@ -85,7 +85,7 @@ public class AccountService {
     }
 
     public void processModel(AccountModel model) {
-        System.out.println("*** processModel");
+        System.out.println("*** AccountModel processModel");
         init();
         checkDouble(model);
         findRefProductRegisterType(model);

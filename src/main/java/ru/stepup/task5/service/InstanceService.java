@@ -151,9 +151,9 @@ public class InstanceService {
                 agreement.setMinimumInterestRate(a.getMinimumInterestRate());
                 agreement.setMinimumInterestRateCoefficient(a.getMinimumInterestRateCoefficient());
                 agreement.setMinimumInterestRateCoefficientAction(((a.getMinimumInterestRateCoefficientAction() == null) ? null : a.getMinimumInterestRateCoefficientAction().name()));
-                agreement.setMaximalInterestRate(a.getMaximalnterestRate());
-                agreement.setMaximalInterestRateCoefficient(a.getMaximalnterestRateCoefficient());
-                agreement.setMaximalInterestRateCoefficientAction(((a.getMaximalnterestRateCoefficientAction() == null) ? null : a.getMaximalnterestRateCoefficientAction().name()));
+                agreement.setMaximalInterestRate(a.getMaximalInterestRate());
+                agreement.setMaximalInterestRateCoefficient(a.getMaximalInterestRateCoefficient());
+                agreement.setMaximalInterestRateCoefficientAction(((a.getMaximalInterestRateCoefficientAction() == null) ? null : a.getMaximalInterestRateCoefficientAction().name()));
 
                 product.getAgreements().add(agreement);
                 agreementRepo.save(agreement);
@@ -170,6 +170,8 @@ public class InstanceService {
     }
     @Transactional
     public void processModel(InstanceModel model) {
+        System.out.println("*** InstanceModel processModel");
+        System.out.println(model);
         init();
 
         if (model.getInstanceId() == null) {

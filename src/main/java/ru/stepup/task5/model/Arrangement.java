@@ -32,9 +32,9 @@ public class Arrangement {
     private BigDecimal minimumInterestRate;
     private BigDecimal minimumInterestRateCoefficient;
     private PlusMinusType minimumInterestRateCoefficientAction;
-    private BigDecimal maximalnterestRate;
-    private BigDecimal maximalnterestRateCoefficient;
-    private PlusMinusType maximalnterestRateCoefficientAction;
+    private BigDecimal maximalInterestRate;
+    private BigDecimal maximalInterestRateCoefficient;
+    private PlusMinusType maximalInterestRateCoefficientAction;
 
     @Override
     public String toString() {
@@ -57,9 +57,9 @@ public class Arrangement {
                 ", minimumInterestRate=" + minimumInterestRate +
                 ", minimumInterestRateCoefficient='" + minimumInterestRateCoefficient + '\'' +
                 ", minimumInterestRateCoefficientAction='" + minimumInterestRateCoefficientAction + '\'' +
-                ", maximalnterestRate=" + maximalnterestRate +
-                ", maximalnterestRateCoefficient=" + maximalnterestRateCoefficient +
-                ", maximalnterestRateCoefficientAction='" + maximalnterestRateCoefficientAction + '\'' +
+                ", maximalInterestRate=" + maximalInterestRate +
+                ", maximalInterestRateCoefficient=" + maximalInterestRateCoefficient +
+                ", maximalInterestRateCoefficientAction='" + maximalInterestRateCoefficientAction + '\'' +
                 '}';
     }
 }
