@@ -170,8 +170,8 @@ public class InstanceService {
     }
     @Transactional
     public void processModel(InstanceModel model) {
-        System.out.println("*** InstanceModel processModel");
-        System.out.println(model);
+//        System.out.println("*** InstanceModel processModel");
+//        System.out.println(model);
         init();
 
         if (model.getInstanceId() == null) {

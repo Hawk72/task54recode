@@ -19,9 +19,7 @@ public class AccountController {
 
     @PostMapping("corporate-settlement-account/create")
     public ResponseEntity<Object> handle(@Valid @RequestBody AccountModel model) {
-        System.out.println("*** Зашли");
         service.processModel(model);
-        System.out.println("*** После");
         return ResponseEntity.status(HttpStatus.OK)
                 .body(service.getResult());
     }

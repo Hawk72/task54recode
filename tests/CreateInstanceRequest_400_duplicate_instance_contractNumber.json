@@ -1,0 +1,28 @@
+{
+	"instanceId":null,
+	"productType":"НСО",
+	"productCode":"03.012.002",
+	"registerType":"03.012.002_47533_ComSoLd",
+	"mdmCode":"15",
+	"contractNumber":"002/2023_NSO",
+	"contractDate":"2024-15-04",
+	"priority":1,
+	"interestRatePenalty":12.3,
+	"minimalBalance":11.2,
+	"thresholdAmount":10.1,
+	"accountingDetails":"р/с 40701810400000000001 в ПОА Банк ФК Открытие",
+	"rateType":"прогрессивная",
+	"taxPercentageRate":9.9,
+	"technicalOverdraftLimitAmount":9.8,
+	"contractId":0,
+	"branchCode":"0022",
+	"isoCurrencyCode":"800",
+	"urgencyCode":"00",
+	"referenceCode":25,
+	"additionalPropertiesVip":{
+			"data":[
+					{"key":"RailwayRegionOwn","value":"ABC"},
+					{"key":"counter","value":"123"}
+			]
+	}
+}
