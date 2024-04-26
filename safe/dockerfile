@@ -1,0 +1,5 @@
+FROM openjdk:19.0.2+7-Ubuntu-0ubuntu322.04
+
+COPY ./out/artifacts/task5_jar/task5.jar task5.jar
+
+ENTRYPOINT [ "java", "-jar", "task5.jar" ]
