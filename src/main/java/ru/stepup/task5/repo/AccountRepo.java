@@ -6,4 +6,5 @@ import ru.stepup.task5.entity.Account;
 
 @Component
 public interface AccountRepo extends JpaRepository<Account, Long> {
+
 }

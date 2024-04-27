@@ -30,7 +30,6 @@ import static io.restassured.RestAssured.given;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-
 public class TestAccount {
     private ApplicationContext ctx;
     @LocalServerPort
@@ -43,7 +42,6 @@ public class TestAccount {
     static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:latest");
 
     @BeforeAll
-
     static void beforeAll() {
         postgres.start();
     }
@@ -65,7 +63,9 @@ public class TestAccount {
         registry.add("spring.datasource.password", postgres::getPassword);
     }
 
-    @Sql(scripts = "/Script_insert.sql")
+    @Sql(scripts = "/pg1_create.sql")
+    @Sql(scripts = "/pg2_insert.sql")
+
     @Test
     @Order(1)
     @DisplayName("Проверка срабатывания ошибки при незаполнении обязательных параметров")
@@ -74,15 +74,14 @@ public class TestAccount {
         Validator validator = ctx.getBean(Validator.class);
         Set<ConstraintViolation<AccountModel>> violations = validator.validate(model);
         Assertions.assertEquals(1, violations.size());
-
-        model.setInstanceId(1l);
+        model.setInstanceId(1L);
         violations = validator.validate(model);
         Assertions.assertEquals(0, violations.size());
     }
 
     @Test
     @Order(2)
-    @DisplayName("Проверка срабатывания ошибки при наличии дублей")
+    @DisplayName("ПроScript_insertверка срабатывания ошибки при наличии дублей")
     public void checkDouble() {
         AccountModel model = new AccountModel();
         model.setInstanceId(1L);
